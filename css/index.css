@@ -135,3 +135,8 @@ button:disabled {
 .paciente-invalido {
   background-color: #f9c9c9;
 }
+
+#mensagens-erro {
+  color: red;
+  margin-bottom: 5px;
+}
