@@ -140,3 +140,18 @@ button:disabled {
   color: red;
   margin-bottom: 5px;
 }
+
+.fadeOut {
+  opacity: 0;
+  transition: 0.5s;
+}
+
+#filtrar-tabela {
+  width: 30%;
+  height: 30px;
+  margin-bottom: 10px;
+}
+
+.invisivel {
+  display: none;
+}
