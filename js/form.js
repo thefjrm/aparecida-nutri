@@ -61,19 +61,24 @@ function montaTr(paciente) {
   return pacienteTr;
 }
 
+function adicionaPacienteNaTabela(paciente) {
+  const pacienteTr = montaTr(paciente);
+  const tabela = document.querySelector("#tabela-pacientes");
+  tabela.appendChild(pacienteTr);
+}
+
 botaoAdicionar.addEventListener("click", function (event) {
   event.preventDefault();
   const form = document.querySelector("#form-adiciona");
   const paciente = obtemPacienteDoFormulario(form);
 
-  const pacienteTr = montaTr(paciente);
   let erros = validaPaciente(paciente);
   if (erros.length > 0) {
     exibeMensagensDeErro(erros);
     return;
   }
-  const tabela = document.querySelector("#tabela-pacientes");
-  tabela.appendChild(pacienteTr);
+
+  adicionaPacienteNaTabela(paciente);
   form.reset();
 
   const mensagensErro = document.querySelector("#mensagens-erro");
